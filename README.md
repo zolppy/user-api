@@ -14,3 +14,7 @@
 </div>
 
 <h2>:hammer: em construção...</h2>
+
+<h2>Diagrama Entidade-Relacionamento</h2>
+
+![Captura de tela_2024-11-03_11-30-34](https://github.com/user-attachments/assets/3c05bcaa-cc3c-4c21-8bb2-9828c443b7ae)
