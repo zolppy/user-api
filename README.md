@@ -13,8 +13,6 @@
   <p>Simples API (<em>Application Programming Interface</em>), desenvolvida com Express.js, responsável por prover as quatro operações do CRUD (<em>Create, Read, Update, Delete</em>) para usuários.</p>
 </div>
 
-<h2>:hammer: em construção...</h2>
-
 <h2><em>Endpoints</em> da API</h2>
 
 <code>GET /users</code>
