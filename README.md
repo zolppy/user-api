@@ -15,6 +15,56 @@
 
 <h2>:hammer: em construção...</h2>
 
+<h2><em>Endpoints</em> da API</h2>
+
+<code>GET /users</code>
+
+<p>Retorna a lista completa de usuários cadastrados.</p>
+
+<p>Exemplo de resposta (dados fictícios):</p>
+
+<pre>
+  [
+    {
+      "id": 1,
+      "name": "Nome Completo do Usuário Um",
+      "birthday": "2004/02/12",
+      "tel": "(11) 92222-3333",
+      "e-mail": "exemplo-do-email-um@exemplo.com"
+    },
+    {
+      "id": 2,
+      "name": "Nome Completo do Usuário Dois",
+      "birthday": "1999/12/30",
+      "tel": "(21) 91234-4444",
+      "e-mail": "exemplo-do-email-dois@exemplo.com"
+    },
+    {
+      "id": 3,
+      "name": "Nome Completo do Usuário Três",
+      "birthday": "2001/11/11",
+      "tel": "(44) 94444-4321",
+      "e-mail": "exemplo-do-email-três@exemplo.com"
+    }
+  ]
+</pre>
+
+<code>GET /users/:id</code>
+
+<p>Retorna dados de um usuário específico, de acordo com o id.</p>
+
+<p>Exemplo de resposta (dados fictícios):</p>
+
+<pre>
+  {
+    "id": 2,
+    "name": "Nome Completo do Usuário Dois",
+    "birthday": "1999/12/30",
+    "tel": "(21) 91234-4444",
+    "e-mail": "exemplo-do-email-dois@exemplo.com"
+  }
+</pre>
+
 <h2>Configuração do banco de dados</h2>
 
 <p>Será necessário alterar as variáveis de ambiente presentes no arquivo <code>.env</code> com sua própria instância de banco de dados PostgreSQL.</p>
