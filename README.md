@@ -15,6 +15,18 @@
 
 <h2>:hammer: em construção...</h2>
 
+<h2>Configuração do banco de dados</h2>
+
+<p>Será necessário alterar as variáveis de ambiente presentes no arquivo <code>.env</code> com sua própria instância de banco de dados PostgreSQL.</p>
+
+<pre>
+  DB_HOST=seu_host
+  DB_PORT=sua_porta
+  DB_NAME=seu_nome_do_banco
+  DB_USER=seu_usuário
+  DB_PASSWORD=sua_senha
+</pre>
+
 <h2>Diagrama Entidade-Relacionamento</h2>
 
 ![Captura de tela_2024-11-03_11-30-34](https://github.com/user-attachments/assets/3c05bcaa-cc3c-4c21-8bb2-9828c443b7ae)
