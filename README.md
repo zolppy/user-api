@@ -63,6 +63,18 @@
   }
 </pre>
 
+<code>POST /users</code>
+
+<p>Cadastra um novo usuário.</p>
+
+<code>PUT /users/:id</code>
+
+<p>Atualiza um usuário específico, de acordo com o id.</p>
+
+<code>DELETE /users/:id</code>
+
+<p>Remove um usuário específico, de acordo com o id.</p>
+
 <h2>Configuração do banco de dados</h2>
 
 <p>Será necessário alterar as variáveis de ambiente presentes no arquivo <code>.env</code> com sua própria instância de banco de dados PostgreSQL.</p>
