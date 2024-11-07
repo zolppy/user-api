@@ -5,12 +5,14 @@
     <img src="https://img.shields.io/badge/EXPRESS.JS-4.21.1-blue" />
     <img src="https://img.shields.io/badge/NODEMON-3.1.7-indigo" />
     <img src="https://img.shields.io/badge/PG-8.13.1-red" />
+    <img src="https://img.shields.io/badge/PG HSTORE-2.3.4-orange" />
+    <img src="https://img.shields.io/badge/SEQUELIZE-6.37.5-cyan" />
     <img src="https://img.shields.io/badge/DOTENV-16.4.5-magenta" />
-    <img src="https://img.shields.io/badge/POSTGRESQL-15.8-red" />
+    <img src="https://img.shields.io/badge/POSTGRESQL-15.8-pink" />
     <img src="https://img.shields.io/badge/STATUS-DEVELOPMENT-green" />
     <img src="https://img.shields.io/badge/LICENSE-MIT-yellow" />
   </ul>
-  <p>Simples API (<em>Application Programming Interface</em>), desenvolvida com Express.js, responsável por prover as quatro operações do CRUD (<em>Create, Read, Update, Delete</em>) para usuários.</p>
+  <p>API (<em>Application Programming Interface</em>), desenvolvida com Express.js, responsável por prover as quatro operações do CRUD (<em>Create, Read, Update, Delete</em>) para usuários.</p>
 </div>
 
 <h2><em>Endpoints</em> da API</h2>
