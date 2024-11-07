@@ -1,14 +1,14 @@
 {
-  "name": "crud",
+  "name": "user-crud",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Gabriel Cavalcante de Jesus Oliveira",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
