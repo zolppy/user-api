@@ -1,5 +1,5 @@
 import client from '../config/db.js'
-import search from '../utils/search.js'
+import userExists from '../utils/userExists.js'
 
 class UserController {
   async create(req, res) {
@@ -8,19 +8,19 @@ class UserController {
       'INSERT INTO public.user(name, birthday, tel, email) VALUES($1, $2, $3, $4) RETURNING *'
 
     try {
-      if (await search('name', name)) {
+      if (await userExists('name', name)) {
         return res
           .status(409)
           .json({ error: 'Já existe um usuário com esse nome' })
       }
 
-      if (await search('tel', tel)) {
+      if (await userExists('tel', tel)) {
         return res
           .status(409)
           .json({ error: 'Já existe um usuário com esse telefone' })
       }
 
-      if (await search('email', email)) {
+      if (await userExists('email', email)) {
         return res
           .status(409)
           .json({ error: 'Já existe um usuário com esse e-mail' })
