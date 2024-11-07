@@ -1,8 +1,8 @@
 import express from 'express'
-import UseRouter from './userRouter.js'
+import useRouter from './userRouter.js'
 
-const Router = express.Router()
+const router = express.Router()
 
-Router.use('/users', UseRouter)
+router.use('/users', useRouter)
 
-export default Router
+export default router
