@@ -1,18 +1,35 @@
 import client from '../config/db.js'
+import search from '../utils/search.js'
 
 class UserController {
   async create(req, res) {
+    const { name, birthday, tel, email } = req.body
     const query =
       'INSERT INTO public.user(name, birthday, tel, email) VALUES($1, $2, $3, $4) RETURNING *'
 
-    const { name, birthday, tel, email } = req.body
-
     try {
+      if (await search('name', name)) {
+        return res
+          .status(409)
+          .json({ error: 'Já existe um usuário com esse nome' })
+      }
+
+      if (await search('tel', tel)) {
+        return res
+          .status(409)
+          .json({ error: 'Já existe um usuário com esse telefone' })
+      }
+
+      if (await search('email', email)) {
+        return res
+          .status(409)
+          .json({ error: 'Já existe um usuário com esse e-mail' })
+      }
+
       const result = await client.query(query, [name, birthday, tel, email])
-      res.status(201).json(result.rows[0])
+      return res.status(201).json(result.rows[0])
     } catch (err) {
-      console.error('Falha ao adicionar usuário:', err)
-      res.status(500).json({ error: 'Erro ao criar usuário' })
+      return res.status(500).json({ error: 'Erro ao criar usuário: ' + err })
     }
   }
 
@@ -23,7 +40,6 @@ class UserController {
       const result = await client.query(query)
       res.status(200).json(result.rows)
     } catch (err) {
-      console.error('Falha ao buscar usuários:', err)
       res.status(500).json({ error: 'Erro ao buscar usuários' })
     }
   }
@@ -40,7 +56,6 @@ class UserController {
         res.status(404).json({ error: 'Usuário não encontrado' })
       }
     } catch (err) {
-      console.error('Falha ao buscar usuário:', err)
       res.status(500).json({ error: 'Erro ao buscar usuário' })
     }
   }
@@ -59,7 +74,6 @@ class UserController {
         res.status(404).json({ error: 'Usuário não encontrado' })
       }
     } catch (err) {
-      console.error('Falha ao atualizar usuário:', err)
       res.status(500).json({ error: 'Erro ao atualizar usuário' })
     }
   }
@@ -76,7 +90,6 @@ class UserController {
         res.status(404).json({ error: 'Usuário não encontrado' })
       }
     } catch (err) {
-      console.error('Falha ao remover usuário:', err)
       res.status(500).json({ error: 'Erro ao remover usuário' })
     }
   }
